@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.rules_cap_problem import RulesCapProblem
+from twitter_v2.models.rules_cap_problem import RulesCapProblem
 
 # TODO update the JSON string below
 json = "{}"

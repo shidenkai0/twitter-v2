@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_dm_event_response import CreateDmEventResponse
+from twitter_v2.models.create_dm_event_response import CreateDmEventResponse
 
 # TODO update the JSON string below
 json = "{}"

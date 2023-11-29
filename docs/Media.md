@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.media import Media
+from twitter_v2.models.media import Media
 
 # TODO update the JSON string below
 json = "{}"

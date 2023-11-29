@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.context_annotation_domain_fields import ContextAnnotationDomainFields
+from twitter_v2.models.context_annotation_domain_fields import ContextAnnotationDomainFields
 
 # TODO update the JSON string below
 json = "{}"

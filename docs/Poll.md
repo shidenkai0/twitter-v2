@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.poll import Poll
+from twitter_v2.models.poll import Poll
 
 # TODO update the JSON string below
 json = "{}"

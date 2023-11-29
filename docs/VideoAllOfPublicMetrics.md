@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.video_all_of_public_metrics import VideoAllOfPublicMetrics
+from twitter_v2.models.video_all_of_public_metrics import VideoAllOfPublicMetrics
 
 # TODO update the JSON string below
 json = "{}"

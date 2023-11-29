@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.duplicate_rule_problem import DuplicateRuleProblem
+from twitter_v2.models.duplicate_rule_problem import DuplicateRuleProblem
 
 # TODO update the JSON string below
 json = "{}"

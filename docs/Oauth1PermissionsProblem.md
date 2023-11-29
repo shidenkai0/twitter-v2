@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.oauth1_permissions_problem import Oauth1PermissionsProblem
+from twitter_v2.models.oauth1_permissions_problem import Oauth1PermissionsProblem
 
 # TODO update the JSON string below
 json = "{}"

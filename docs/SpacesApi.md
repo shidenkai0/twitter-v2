@@ -1,4 +1,4 @@
-# openapi_client.SpacesApi
+# twitter_v2.SpacesApi
 
 All URIs are relative to *https://api.twitter.com*
 
@@ -26,14 +26,14 @@ Returns a variety of information about the Space specified by the requested ID
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get2_spaces_id_response import Get2SpacesIdResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.get2_spaces_id_response import Get2SpacesIdResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -45,14 +45,14 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SpacesApi(api_client)
+    api_instance = twitter_v2.SpacesApi(api_client)
     id = '1YqKDqWqdPLsV' # str | The ID of the Space to be retrieved.
     space_fields = ['[\"created_at\",\"creator_id\",\"ended_at\",\"host_ids\",\"id\",\"invited_user_ids\",\"is_ticketed\",\"lang\",\"participant_count\",\"scheduled_start\",\"speaker_ids\",\"started_at\",\"state\",\"subscriber_count\",\"title\",\"topic_ids\",\"updated_at\"]'] # List[str] | A comma separated list of Space fields to display. (optional)
     expansions = ['[\"creator_id\",\"host_ids\",\"invited_user_ids\",\"speaker_ids\",\"topic_ids\"]'] # List[str] | A comma separated list of fields to expand. (optional)
@@ -115,14 +115,14 @@ Returns a variety of information about the Spaces created by the provided User I
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get2_spaces_by_creator_ids_response import Get2SpacesByCreatorIdsResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.get2_spaces_by_creator_ids_response import Get2SpacesByCreatorIdsResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -134,14 +134,14 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SpacesApi(api_client)
+    api_instance = twitter_v2.SpacesApi(api_client)
     user_ids = ['user_ids_example'] # List[str] | The IDs of Users to search through.
     space_fields = ['[\"created_at\",\"creator_id\",\"ended_at\",\"host_ids\",\"id\",\"invited_user_ids\",\"is_ticketed\",\"lang\",\"participant_count\",\"scheduled_start\",\"speaker_ids\",\"started_at\",\"state\",\"subscriber_count\",\"title\",\"topic_ids\",\"updated_at\"]'] # List[str] | A comma separated list of Space fields to display. (optional)
     expansions = ['[\"creator_id\",\"host_ids\",\"invited_user_ids\",\"speaker_ids\",\"topic_ids\"]'] # List[str] | A comma separated list of fields to expand. (optional)
@@ -204,14 +204,14 @@ Returns a variety of information about the Spaces specified by the requested IDs
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get2_spaces_response import Get2SpacesResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.get2_spaces_response import Get2SpacesResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -223,14 +223,14 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SpacesApi(api_client)
+    api_instance = twitter_v2.SpacesApi(api_client)
     ids = ['ids_example'] # List[str] | The list of Space IDs to return.
     space_fields = ['[\"created_at\",\"creator_id\",\"ended_at\",\"host_ids\",\"id\",\"invited_user_ids\",\"is_ticketed\",\"lang\",\"participant_count\",\"scheduled_start\",\"speaker_ids\",\"started_at\",\"state\",\"subscriber_count\",\"title\",\"topic_ids\",\"updated_at\"]'] # List[str] | A comma separated list of Space fields to display. (optional)
     expansions = ['[\"creator_id\",\"host_ids\",\"invited_user_ids\",\"speaker_ids\",\"topic_ids\"]'] # List[str] | A comma separated list of fields to expand. (optional)
@@ -293,14 +293,14 @@ Returns Spaces that match the provided query.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get2_spaces_search_response import Get2SpacesSearchResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.get2_spaces_search_response import Get2SpacesSearchResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -312,14 +312,14 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SpacesApi(api_client)
+    api_instance = twitter_v2.SpacesApi(api_client)
     query = 'crypto' # str | The search query.
     state = 'all' # str | The state of Spaces to search for. (optional) (default to 'all')
     max_results = 100 # int | The number of results to return. (optional) (default to 100)
@@ -385,14 +385,14 @@ Retrieves the list of Users who purchased a ticket to the given space
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get2_spaces_id_buyers_response import Get2SpacesIdBuyersResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.get2_spaces_id_buyers_response import Get2SpacesIdBuyersResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -404,9 +404,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SpacesApi(api_client)
+    api_instance = twitter_v2.SpacesApi(api_client)
     id = '1YqKDqWqdPLsV' # str | The ID of the Space to be retrieved.
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
@@ -471,14 +471,14 @@ Retrieves Tweets shared in the specified Space.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get2_spaces_id_tweets_response import Get2SpacesIdTweetsResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.get2_spaces_id_tweets_response import Get2SpacesIdTweetsResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -490,14 +490,14 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SpacesApi(api_client)
+    api_instance = twitter_v2.SpacesApi(api_client)
     id = '1YqKDqWqdPLsV' # str | The ID of the Space to be retrieved.
     max_results = 100 # int | The number of Tweets to fetch from the provided space. If not provided, the value will default to the maximum of 100. (optional) (default to 100)
     tweet_fields = ['[\"attachments\",\"author_id\",\"context_annotations\",\"conversation_id\",\"created_at\",\"edit_controls\",\"edit_history_tweet_ids\",\"entities\",\"geo\",\"id\",\"in_reply_to_user_id\",\"lang\",\"non_public_metrics\",\"note_tweet\",\"organic_metrics\",\"possibly_sensitive\",\"promoted_metrics\",\"public_metrics\",\"referenced_tweets\",\"reply_settings\",\"source\",\"text\",\"withheld\"]'] # List[str] | A comma separated list of Tweet fields to display. (optional)

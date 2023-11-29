@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.field_unauthorized_problem import FieldUnauthorizedProblem
+from twitter_v2.models.field_unauthorized_problem import FieldUnauthorizedProblem
 
 # TODO update the JSON string below
 json = "{}"

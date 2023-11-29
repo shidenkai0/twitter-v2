@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "openapi_client"
+name = "twitter_v2"
 version = "1.0.0"
 description = "Twitter API v2"
 authors = ["Twitter Developers <team@openapitools.org>"]
@@ -7,7 +7,7 @@ license = "Twitter Developer Agreement and Policy"
 readme = "README.md"
 repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Twitter API v2"]
-include = ["openapi_client/py.typed"]
+include = ["twitter_v2/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.7"

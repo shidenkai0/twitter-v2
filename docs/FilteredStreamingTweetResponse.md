@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.filtered_streaming_tweet_response import FilteredStreamingTweetResponse
+from twitter_v2.models.filtered_streaming_tweet_response import FilteredStreamingTweetResponse
 
 # TODO update the JSON string below
 json = "{}"

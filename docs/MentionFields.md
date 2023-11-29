@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.mention_fields import MentionFields
+from twitter_v2.models.mention_fields import MentionFields
 
 # TODO update the JSON string below
 json = "{}"

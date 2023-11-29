@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.operational_disconnect_problem import OperationalDisconnectProblem
+from twitter_v2.models.operational_disconnect_problem import OperationalDisconnectProblem
 
 # TODO update the JSON string below
 json = "{}"

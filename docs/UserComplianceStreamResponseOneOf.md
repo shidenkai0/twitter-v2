@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.user_compliance_stream_response_one_of import UserComplianceStreamResponseOneOf
+from twitter_v2.models.user_compliance_stream_response_one_of import UserComplianceStreamResponseOneOf
 
 # TODO update the JSON string below
 json = "{}"

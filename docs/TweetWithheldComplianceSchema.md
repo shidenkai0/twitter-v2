@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.tweet_withheld_compliance_schema import TweetWithheldComplianceSchema
+from twitter_v2.models.tweet_withheld_compliance_schema import TweetWithheldComplianceSchema
 
 # TODO update the JSON string below
 json = "{}"

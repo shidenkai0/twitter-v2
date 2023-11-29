@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.variant import Variant
+from twitter_v2.models.variant import Variant
 
 # TODO update the JSON string below
 json = "{}"

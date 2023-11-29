@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.full_text_entities_annotations_inner import FullTextEntitiesAnnotationsInner
+from twitter_v2.models.full_text_entities_annotations_inner import FullTextEntitiesAnnotationsInner
 
 # TODO update the JSON string below
 json = "{}"

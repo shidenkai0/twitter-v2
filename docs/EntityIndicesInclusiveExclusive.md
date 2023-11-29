@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.entity_indices_inclusive_exclusive import EntityIndicesInclusiveExclusive
+from twitter_v2.models.entity_indices_inclusive_exclusive import EntityIndicesInclusiveExclusive
 
 # TODO update the JSON string below
 json = "{}"

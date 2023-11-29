@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.bookmark_add_request import BookmarkAddRequest
+from twitter_v2.models.bookmark_add_request import BookmarkAddRequest
 
 # TODO update the JSON string below
 json = "{}"

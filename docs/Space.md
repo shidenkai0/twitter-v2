@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.space import Space
+from twitter_v2.models.space import Space
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.user_scrub_geo_object_schema import UserScrubGeoObjectSchema
+from twitter_v2.models.user_scrub_geo_object_schema import UserScrubGeoObjectSchema
 
 # TODO update the JSON string below
 json = "{}"

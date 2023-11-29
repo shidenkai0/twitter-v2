@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.user_takedown_compliance_schema import UserTakedownComplianceSchema
+from twitter_v2.models.user_takedown_compliance_schema import UserTakedownComplianceSchema
 
 # TODO update the JSON string below
 json = "{}"

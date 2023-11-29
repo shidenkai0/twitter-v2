@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.dm_event_referenced_tweets_inner import DmEventReferencedTweetsInner
+from twitter_v2.models.dm_event_referenced_tweets_inner import DmEventReferencedTweetsInner
 
 # TODO update the JSON string below
 json = "{}"

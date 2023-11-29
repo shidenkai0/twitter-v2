@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_compliance_job_request import CreateComplianceJobRequest
+from twitter_v2.models.create_compliance_job_request import CreateComplianceJobRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.compliance_job import ComplianceJob
+from twitter_v2.models.compliance_job import ComplianceJob
 
 # TODO update the JSON string below
 json = "{}"

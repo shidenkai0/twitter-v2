@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.url_entity import UrlEntity
+from twitter_v2.models.url_entity import UrlEntity
 
 # TODO update the JSON string below
 json = "{}"

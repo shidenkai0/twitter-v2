@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get2_spaces_search_response import Get2SpacesSearchResponse
+from twitter_v2.models.get2_spaces_search_response import Get2SpacesSearchResponse
 
 # TODO update the JSON string below
 json = "{}"

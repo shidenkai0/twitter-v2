@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.get2_tweets_sample_stream_response import Get2TweetsSampleStreamResponse
+from twitter_v2.models.get2_tweets_sample_stream_response import Get2TweetsSampleStreamResponse
 
 # TODO update the JSON string below
 json = "{}"

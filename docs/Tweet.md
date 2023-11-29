@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.tweet import Tweet
+from twitter_v2.models.tweet import Tweet
 
 # TODO update the JSON string below
 json = "{}"

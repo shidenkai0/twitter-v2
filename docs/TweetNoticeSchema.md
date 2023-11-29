@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.tweet_notice_schema import TweetNoticeSchema
+from twitter_v2.models.tweet_notice_schema import TweetNoticeSchema
 
 # TODO update the JSON string below
 json = "{}"

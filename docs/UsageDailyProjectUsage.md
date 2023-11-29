@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.usage_daily_project_usage import UsageDailyProjectUsage
+from twitter_v2.models.usage_daily_project_usage import UsageDailyProjectUsage
 
 # TODO update the JSON string below
 json = "{}"

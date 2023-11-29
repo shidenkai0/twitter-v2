@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.user_scrub_geo_schema import UserScrubGeoSchema
+from twitter_v2.models.user_scrub_geo_schema import UserScrubGeoSchema
 
 # TODO update the JSON string below
 json = "{}"

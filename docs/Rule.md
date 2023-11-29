@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.rule import Rule
+from twitter_v2.models.rule import Rule
 
 # TODO update the JSON string below
 json = "{}"

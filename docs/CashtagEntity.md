@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.cashtag_entity import CashtagEntity
+from twitter_v2.models.cashtag_entity import CashtagEntity
 
 # TODO update the JSON string below
 json = "{}"

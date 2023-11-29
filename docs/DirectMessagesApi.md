@@ -1,4 +1,4 @@
-# openapi_client.DirectMessagesApi
+# twitter_v2.DirectMessagesApi
 
 All URIs are relative to *https://api.twitter.com*
 
@@ -25,15 +25,15 @@ Creates a new message for a DM Conversation specified by DM Conversation ID
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_dm_event_response import CreateDmEventResponse
-from openapi_client.models.create_message_request import CreateMessageRequest
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.create_dm_event_response import CreateDmEventResponse
+from twitter_v2.models.create_message_request import CreateMessageRequest
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -45,11 +45,11 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DirectMessagesApi(api_client)
+    api_instance = twitter_v2.DirectMessagesApi(api_client)
     dm_conversation_id = 'dm_conversation_id_example' # str | The DM Conversation ID.
-    create_message_request = openapi_client.CreateMessageRequest() # CreateMessageRequest |  (optional)
+    create_message_request = twitter_v2.CreateMessageRequest() # CreateMessageRequest |  (optional)
 
     try:
         # Send a new message to a DM Conversation
@@ -103,15 +103,15 @@ Creates a new DM Conversation.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_dm_conversation_request import CreateDmConversationRequest
-from openapi_client.models.create_dm_event_response import CreateDmEventResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.create_dm_conversation_request import CreateDmConversationRequest
+from twitter_v2.models.create_dm_event_response import CreateDmEventResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -123,10 +123,10 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DirectMessagesApi(api_client)
-    create_dm_conversation_request = openapi_client.CreateDmConversationRequest() # CreateDmConversationRequest |  (optional)
+    api_instance = twitter_v2.DirectMessagesApi(api_client)
+    create_dm_conversation_request = twitter_v2.CreateDmConversationRequest() # CreateDmConversationRequest |  (optional)
 
     try:
         # Create a new DM Conversation
@@ -179,15 +179,15 @@ Creates a new message for a DM Conversation with a participant user by ID
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_dm_event_response import CreateDmEventResponse
-from openapi_client.models.create_message_request import CreateMessageRequest
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.create_dm_event_response import CreateDmEventResponse
+from twitter_v2.models.create_message_request import CreateMessageRequest
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -199,11 +199,11 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DirectMessagesApi(api_client)
+    api_instance = twitter_v2.DirectMessagesApi(api_client)
     participant_id = 'participant_id_example' # str | The ID of the recipient user that will receive the DM.
-    create_message_request = openapi_client.CreateMessageRequest() # CreateMessageRequest |  (optional)
+    create_message_request = twitter_v2.CreateMessageRequest() # CreateMessageRequest |  (optional)
 
     try:
         # Send a new message to a user
@@ -257,14 +257,14 @@ Returns DM Events for a DM Conversation
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get2_dm_conversations_id_dm_events_response import Get2DmConversationsIdDmEventsResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.get2_dm_conversations_id_dm_events_response import Get2DmConversationsIdDmEventsResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -276,9 +276,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DirectMessagesApi(api_client)
+    api_instance = twitter_v2.DirectMessagesApi(api_client)
     id = 'id_example' # str | The DM Conversation ID.
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
@@ -348,14 +348,14 @@ Returns DM Events for a DM Conversation
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get2_dm_conversations_with_participant_id_dm_events_response import Get2DmConversationsWithParticipantIdDmEventsResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.get2_dm_conversations_with_participant_id_dm_events_response import Get2DmConversationsWithParticipantIdDmEventsResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -367,9 +367,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DirectMessagesApi(api_client)
+    api_instance = twitter_v2.DirectMessagesApi(api_client)
     participant_id = 'participant_id_example' # str | The ID of the participant user for the One to One DM conversation.
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
@@ -439,14 +439,14 @@ Returns recent DM Events across DM conversations
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get2_dm_events_response import Get2DmEventsResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.get2_dm_events_response import Get2DmEventsResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -458,9 +458,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DirectMessagesApi(api_client)
+    api_instance = twitter_v2.DirectMessagesApi(api_client)
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
     event_types = ["MessageCreate","ParticipantsLeave","ParticipantsJoin"] # List[str] | The set of event_types to include in the results. (optional) (default to ["MessageCreate","ParticipantsLeave","ParticipantsJoin"])

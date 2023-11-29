@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.tweet_note_tweet_entities import TweetNoteTweetEntities
+from twitter_v2.models.tweet_note_tweet_entities import TweetNoteTweetEntities
 
 # TODO update the JSON string below
 json = "{}"

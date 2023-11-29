@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.tweet_takedown_compliance_schema import TweetTakedownComplianceSchema
+from twitter_v2.models.tweet_takedown_compliance_schema import TweetTakedownComplianceSchema
 
 # TODO update the JSON string below
 json = "{}"

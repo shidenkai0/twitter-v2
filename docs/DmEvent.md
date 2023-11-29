@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.dm_event import DmEvent
+from twitter_v2.models.dm_event import DmEvent
 
 # TODO update the JSON string below
 json = "{}"

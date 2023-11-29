@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.user_unprotect_compliance_schema import UserUnprotectComplianceSchema
+from twitter_v2.models.user_unprotect_compliance_schema import UserUnprotectComplianceSchema
 
 # TODO update the JSON string below
 json = "{}"

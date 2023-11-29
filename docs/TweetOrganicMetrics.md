@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.tweet_organic_metrics import TweetOrganicMetrics
+from twitter_v2.models.tweet_organic_metrics import TweetOrganicMetrics
 
 # TODO update the JSON string below
 json = "{}"

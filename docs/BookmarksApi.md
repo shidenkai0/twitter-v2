@@ -1,4 +1,4 @@
-# openapi_client.BookmarksApi
+# twitter_v2.BookmarksApi
 
 All URIs are relative to *https://api.twitter.com*
 
@@ -22,14 +22,14 @@ Returns Tweet objects that have been bookmarked by the requesting User
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get2_users_id_bookmarks_response import Get2UsersIdBookmarksResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.get2_users_id_bookmarks_response import Get2UsersIdBookmarksResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -41,9 +41,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BookmarksApi(api_client)
+    api_instance = twitter_v2.BookmarksApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User for whom to return results.
     max_results = 56 # int | The maximum number of results. (optional)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get the next 'page' of results. (optional)
@@ -113,15 +113,15 @@ Adds a Tweet (ID in the body) to the requesting User's (in the path) bookmarks
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.bookmark_add_request import BookmarkAddRequest
-from openapi_client.models.bookmark_mutation_response import BookmarkMutationResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.bookmark_add_request import BookmarkAddRequest
+from twitter_v2.models.bookmark_mutation_response import BookmarkMutationResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -133,11 +133,11 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BookmarksApi(api_client)
+    api_instance = twitter_v2.BookmarksApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User for whom to add bookmarks.
-    bookmark_add_request = openapi_client.BookmarkAddRequest() # BookmarkAddRequest | 
+    bookmark_add_request = twitter_v2.BookmarkAddRequest() # BookmarkAddRequest | 
 
     try:
         # Add Tweet to Bookmarks
@@ -191,14 +191,14 @@ Removes a Tweet from the requesting User's bookmarked Tweets.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.bookmark_mutation_response import BookmarkMutationResponse
-from openapi_client.rest import ApiException
+import twitter_v2
+from twitter_v2.models.bookmark_mutation_response import BookmarkMutationResponse
+from twitter_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = twitter_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -210,9 +210,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with twitter_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BookmarksApi(api_client)
+    api_instance = twitter_v2.BookmarksApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User whose bookmark is to be removed.
     tweet_id = 'tweet_id_example' # str | The ID of the Tweet that the source User is removing from bookmarks.
 

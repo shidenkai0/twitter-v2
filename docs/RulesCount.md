@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.rules_count import RulesCount
+from twitter_v2.models.rules_count import RulesCount
 
 # TODO update the JSON string below
 json = "{}"

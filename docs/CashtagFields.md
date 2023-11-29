@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.cashtag_fields import CashtagFields
+from twitter_v2.models.cashtag_fields import CashtagFields
 
 # TODO update the JSON string below
 json = "{}"

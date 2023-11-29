@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.tweet_delete_response import TweetDeleteResponse
+from twitter_v2.models.tweet_delete_response import TweetDeleteResponse
 
 # TODO update the JSON string below
 json = "{}"

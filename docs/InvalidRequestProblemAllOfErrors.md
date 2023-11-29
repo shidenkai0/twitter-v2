@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.invalid_request_problem_all_of_errors import InvalidRequestProblemAllOfErrors
+from twitter_v2.models.invalid_request_problem_all_of_errors import InvalidRequestProblemAllOfErrors
 
 # TODO update the JSON string below
 json = "{}"

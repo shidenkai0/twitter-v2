@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.user_entities import UserEntities
+from twitter_v2.models.user_entities import UserEntities
 
 # TODO update the JSON string below
 json = "{}"

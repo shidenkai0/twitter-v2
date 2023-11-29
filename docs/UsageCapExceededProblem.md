@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.usage_cap_exceeded_problem import UsageCapExceededProblem
+from twitter_v2.models.usage_cap_exceeded_problem import UsageCapExceededProblem
 
 # TODO update the JSON string below
 json = "{}"
