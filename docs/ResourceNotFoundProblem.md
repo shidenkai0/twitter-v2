@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.resource_not_found_problem import ResourceNotFoundProblem
+from twitter_api_v2.models.resource_not_found_problem import ResourceNotFoundProblem
 
 # TODO update the JSON string below
 json = "{}"

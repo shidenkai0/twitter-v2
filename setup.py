@@ -46,5 +46,5 @@ setup(
     long_description="""\
     Twitter API v2 available endpoints
     """,  # noqa: E501
-    package_data={"twitter_v2": ["py.typed"]},
+    package_data={"twitter_api_v2": ["py.typed"]},
 )

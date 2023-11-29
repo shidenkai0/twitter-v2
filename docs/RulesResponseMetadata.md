@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.rules_response_metadata import RulesResponseMetadata
+from twitter_api_v2.models.rules_response_metadata import RulesResponseMetadata
 
 # TODO update the JSON string below
 json = "{}"

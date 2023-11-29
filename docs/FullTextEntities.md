@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.full_text_entities import FullTextEntities
+from twitter_api_v2.models.full_text_entities import FullTextEntities
 
 # TODO update the JSON string below
 json = "{}"

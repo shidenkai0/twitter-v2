@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.get2_users_id_mentions_response_meta import Get2UsersIdMentionsResponseMeta
+from twitter_api_v2.models.get2_users_id_mentions_response_meta import Get2UsersIdMentionsResponseMeta
 
 # TODO update the JSON string below
 json = "{}"

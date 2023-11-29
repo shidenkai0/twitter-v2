@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.rules_request_summary_one_of import RulesRequestSummaryOneOf
+from twitter_api_v2.models.rules_request_summary_one_of import RulesRequestSummaryOneOf
 
 # TODO update the JSON string below
 json = "{}"

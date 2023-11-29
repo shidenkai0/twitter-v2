@@ -1,4 +1,4 @@
-# twitter_v2.TweetsApi
+# twitter_api_v2.TweetsApi
 
 All URIs are relative to *https://api.twitter.com*
 
@@ -47,15 +47,15 @@ Add or delete rules from a User's active rule set. Users can provide unique, opt
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.add_or_delete_rules_request import AddOrDeleteRulesRequest
-from twitter_v2.models.add_or_delete_rules_response import AddOrDeleteRulesResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.add_or_delete_rules_request import AddOrDeleteRulesRequest
+from twitter_api_v2.models.add_or_delete_rules_response import AddOrDeleteRulesResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -65,15 +65,15 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
-    add_or_delete_rules_request = twitter_v2.AddOrDeleteRulesRequest() # AddOrDeleteRulesRequest | 
+    api_instance = twitter_api_v2.TweetsApi(api_client)
+    add_or_delete_rules_request = twitter_api_v2.AddOrDeleteRulesRequest() # AddOrDeleteRulesRequest | 
     dry_run = True # bool | Dry Run can be used with both the add and delete action, with the expected result given, but without actually taking any action in the system (meaning the end state will always be as it was when the request was submitted). This is particularly useful to validate rule changes. (optional)
     delete_all = True # bool | Delete All can be used to delete all of the rules associated this client app, it should be specified with no other parameters. Once deleted, rules cannot be recovered. (optional)
 
@@ -130,15 +130,15 @@ Causes the User to create a Tweet under the authorized account.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.tweet_create_request import TweetCreateRequest
-from twitter_v2.models.tweet_create_response import TweetCreateResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.tweet_create_request import TweetCreateRequest
+from twitter_api_v2.models.tweet_create_response import TweetCreateResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -150,10 +150,10 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
-    tweet_create_request = twitter_v2.TweetCreateRequest() # TweetCreateRequest | 
+    api_instance = twitter_api_v2.TweetsApi(api_client)
+    tweet_create_request = twitter_api_v2.TweetCreateRequest() # TweetCreateRequest | 
 
     try:
         # Creation of a Tweet
@@ -206,14 +206,14 @@ Delete specified Tweet (in the path) by ID.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.tweet_delete_response import TweetDeleteResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.tweet_delete_response import TweetDeleteResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -225,9 +225,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = 'id_example' # str | The ID of the Tweet to be deleted.
 
     try:
@@ -282,14 +282,14 @@ Returns a variety of information about the Tweet specified by the requested ID.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_tweets_id_response import Get2TweetsIdResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_tweets_id_response import Get2TweetsIdResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -301,14 +301,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = 'id_example' # str | A single Tweet ID.
     tweet_fields = ['[\"attachments\",\"author_id\",\"context_annotations\",\"conversation_id\",\"created_at\",\"edit_controls\",\"edit_history_tweet_ids\",\"entities\",\"geo\",\"id\",\"in_reply_to_user_id\",\"lang\",\"non_public_metrics\",\"note_tweet\",\"organic_metrics\",\"possibly_sensitive\",\"promoted_metrics\",\"public_metrics\",\"referenced_tweets\",\"reply_settings\",\"source\",\"text\",\"withheld\"]'] # List[str] | A comma separated list of Tweet fields to display. (optional)
     expansions = ['[\"attachments.media_keys\",\"attachments.poll_ids\",\"author_id\",\"edit_history_tweet_ids\",\"entities.mentions.username\",\"geo.place_id\",\"in_reply_to_user_id\",\"entities.note.mentions.username\",\"referenced_tweets.id\",\"referenced_tweets.id.author_id\"]'] # List[str] | A comma separated list of fields to expand. (optional)
@@ -375,14 +375,14 @@ Returns a variety of information about the Tweet specified by the requested ID.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_tweets_response import Get2TweetsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_tweets_response import Get2TweetsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -394,14 +394,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     ids = ['ids_example'] # List[str] | A comma separated list of Tweet IDs. Up to 100 are allowed in a single request.
     tweet_fields = ['[\"attachments\",\"author_id\",\"context_annotations\",\"conversation_id\",\"created_at\",\"edit_controls\",\"edit_history_tweet_ids\",\"entities\",\"geo\",\"id\",\"in_reply_to_user_id\",\"lang\",\"non_public_metrics\",\"note_tweet\",\"organic_metrics\",\"possibly_sensitive\",\"promoted_metrics\",\"public_metrics\",\"referenced_tweets\",\"reply_settings\",\"source\",\"text\",\"withheld\"]'] # List[str] | A comma separated list of Tweet fields to display. (optional)
     expansions = ['[\"attachments.media_keys\",\"attachments.poll_ids\",\"author_id\",\"edit_history_tweet_ids\",\"entities.mentions.username\",\"geo.place_id\",\"in_reply_to_user_id\",\"entities.note.mentions.username\",\"referenced_tweets.id\",\"referenced_tweets.id.author_id\"]'] # List[str] | A comma separated list of fields to expand. (optional)
@@ -468,14 +468,14 @@ Returns a variety of information about each Tweet that quotes the Tweet specifie
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_tweets_id_quote_tweets_response import Get2TweetsIdQuoteTweetsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_tweets_id_quote_tweets_response import Get2TweetsIdQuoteTweetsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -487,14 +487,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = 'id_example' # str | A single Tweet ID.
     max_results = 10 # int | The maximum number of results to be returned. (optional) (default to 10)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
@@ -567,14 +567,14 @@ Returns a variety of information about each Tweet that has retweeted the Tweet s
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_tweets_id_retweets_response import Get2TweetsIdRetweetsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_tweets_id_retweets_response import Get2TweetsIdRetweetsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -586,14 +586,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = 'id_example' # str | A single Tweet ID.
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get the next 'page' of results. (optional)
@@ -663,14 +663,14 @@ Returns rules from a User's active rule set. Users can fetch all of their rules 
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.rules_lookup_response import RulesLookupResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.rules_lookup_response import RulesLookupResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -680,14 +680,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     ids = ['ids_example'] # List[str] | A comma-separated list of Rule IDs. (optional)
     max_results = 1000 # int | The maximum number of results. (optional) (default to 1000)
     pagination_token = 'pagination_token_example' # str | This value is populated by passing the 'next_token' returned in a request to paginate through results. (optional)
@@ -745,14 +745,14 @@ Streams 100% of public Tweets.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.streaming_tweet_response import StreamingTweetResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.streaming_tweet_response import StreamingTweetResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -762,14 +762,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     partition = 56 # int | The partition number.
     backfill_minutes = 56 # int | The number of minutes of backfill requested. (optional)
     start_time = '2021-02-14T18:40:40.000Z' # datetime | YYYY-MM-DDTHH:mm:ssZ. The earliest UTC timestamp to which the Tweets will be provided. (optional)
@@ -841,14 +841,14 @@ Streams a deterministic 10% of public Tweets.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_tweets_sample10_stream_response import Get2TweetsSample10StreamResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_tweets_sample10_stream_response import Get2TweetsSample10StreamResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -858,14 +858,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     partition = 56 # int | The partition number.
     backfill_minutes = 56 # int | The number of minutes of backfill requested. (optional)
     start_time = '2021-02-14T18:40:40.000Z' # datetime | YYYY-MM-DDTHH:mm:ssZ. The earliest UTC timestamp to which the Tweets will be provided. (optional)
@@ -937,15 +937,15 @@ Hides or unhides a reply to an owned conversation.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.tweet_hide_request import TweetHideRequest
-from twitter_v2.models.tweet_hide_response import TweetHideResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.tweet_hide_request import TweetHideRequest
+from twitter_api_v2.models.tweet_hide_response import TweetHideResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -957,11 +957,11 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     tweet_id = 'tweet_id_example' # str | The ID of the reply that you want to hide or unhide.
-    tweet_hide_request = twitter_v2.TweetHideRequest() # TweetHideRequest |  (optional)
+    tweet_hide_request = twitter_api_v2.TweetHideRequest() # TweetHideRequest |  (optional)
 
     try:
         # Hide replies
@@ -1016,14 +1016,14 @@ Returns a list of Tweets associated with the provided List ID.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_lists_id_tweets_response import Get2ListsIdTweetsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_lists_id_tweets_response import Get2ListsIdTweetsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1035,14 +1035,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = 'id_example' # str | The ID of the List.
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get the next 'page' of results. (optional)
@@ -1112,14 +1112,14 @@ Streams a deterministic 1% of public Tweets.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.streaming_tweet_response import StreamingTweetResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.streaming_tweet_response import StreamingTweetResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1129,14 +1129,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     backfill_minutes = 56 # int | The number of minutes of backfill requested. (optional)
     tweet_fields = ['[\"attachments\",\"author_id\",\"context_annotations\",\"conversation_id\",\"created_at\",\"edit_controls\",\"edit_history_tweet_ids\",\"entities\",\"geo\",\"id\",\"in_reply_to_user_id\",\"lang\",\"non_public_metrics\",\"note_tweet\",\"organic_metrics\",\"possibly_sensitive\",\"promoted_metrics\",\"public_metrics\",\"referenced_tweets\",\"reply_settings\",\"source\",\"text\",\"withheld\"]'] # List[str] | A comma separated list of Tweet fields to display. (optional)
     expansions = ['[\"attachments.media_keys\",\"attachments.poll_ids\",\"author_id\",\"edit_history_tweet_ids\",\"entities.mentions.username\",\"geo.place_id\",\"in_reply_to_user_id\",\"entities.note.mentions.username\",\"referenced_tweets.id\",\"referenced_tweets.id.author_id\"]'] # List[str] | A comma separated list of fields to expand. (optional)
@@ -1202,14 +1202,14 @@ Streams Tweets matching the stream's active rule set.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.filtered_streaming_tweet_response import FilteredStreamingTweetResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.filtered_streaming_tweet_response import FilteredStreamingTweetResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1219,14 +1219,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     backfill_minutes = 56 # int | The number of minutes of backfill requested. (optional)
     start_time = '2021-02-01T18:40:40.000Z' # datetime | YYYY-MM-DDTHH:mm:ssZ. The earliest UTC timestamp from which the Tweets will be provided. (optional)
     end_time = '2021-02-14T18:40:40.000Z' # datetime | YYYY-MM-DDTHH:mm:ssZ. The latest UTC timestamp to which the Tweets will be provided. (optional)
@@ -1296,14 +1296,14 @@ Retrieves the list of Users who purchased a ticket to the given space
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_spaces_id_buyers_response import Get2SpacesIdBuyersResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_spaces_id_buyers_response import Get2SpacesIdBuyersResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1315,9 +1315,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = '1YqKDqWqdPLsV' # str | The ID of the Space to be retrieved.
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
@@ -1382,14 +1382,14 @@ Retrieves Tweets shared in the specified Space.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_spaces_id_tweets_response import Get2SpacesIdTweetsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_spaces_id_tweets_response import Get2SpacesIdTweetsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1401,14 +1401,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = '1YqKDqWqdPLsV' # str | The ID of the Space to be retrieved.
     max_results = 100 # int | The number of Tweets to fetch from the provided space. If not provided, the value will default to the maximum of 100. (optional) (default to 100)
     tweet_fields = ['[\"attachments\",\"author_id\",\"context_annotations\",\"conversation_id\",\"created_at\",\"edit_controls\",\"edit_history_tweet_ids\",\"entities\",\"geo\",\"id\",\"in_reply_to_user_id\",\"lang\",\"non_public_metrics\",\"note_tweet\",\"organic_metrics\",\"possibly_sensitive\",\"promoted_metrics\",\"public_metrics\",\"referenced_tweets\",\"reply_settings\",\"source\",\"text\",\"withheld\"]'] # List[str] | A comma separated list of Tweet fields to display. (optional)
@@ -1476,14 +1476,14 @@ Returns Tweet Counts that match a search query.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_tweets_counts_all_response import Get2TweetsCountsAllResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_tweets_counts_all_response import Get2TweetsCountsAllResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1493,14 +1493,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     query = '(from:TwitterDev OR from:TwitterAPI) has:media -is:retweet' # str | One query/rule/filter for matching Tweets. Refer to https://t.co/rulelength to identify the max query length.
     start_time = '2013-10-20T19:20:30+01:00' # datetime | YYYY-MM-DDTHH:mm:ssZ. The oldest UTC timestamp (from most recent 7 days) from which the Tweets will be provided. Timestamp is in second granularity and is inclusive (i.e. 12:00:01 includes the first second of the minute). (optional)
     end_time = '2013-10-20T19:20:30+01:00' # datetime | YYYY-MM-DDTHH:mm:ssZ. The newest, most recent UTC timestamp to which the Tweets will be provided. Timestamp is in second granularity and is exclusive (i.e. 12:00:01 excludes the first second of the minute). (optional)
@@ -1570,14 +1570,14 @@ Returns Tweet Counts from the last 7 days that match a search query.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_tweets_counts_recent_response import Get2TweetsCountsRecentResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_tweets_counts_recent_response import Get2TweetsCountsRecentResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1587,14 +1587,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     query = '(from:TwitterDev OR from:TwitterAPI) has:media -is:retweet' # str | One query/rule/filter for matching Tweets. Refer to https://t.co/rulelength to identify the max query length.
     start_time = '2013-10-20T19:20:30+01:00' # datetime | YYYY-MM-DDTHH:mm:ssZ. The oldest UTC timestamp (from most recent 7 days) from which the Tweets will be provided. Timestamp is in second granularity and is inclusive (i.e. 12:00:01 includes the first second of the minute). (optional)
     end_time = '2013-10-20T19:20:30+01:00' # datetime | YYYY-MM-DDTHH:mm:ssZ. The newest, most recent UTC timestamp to which the Tweets will be provided. Timestamp is in second granularity and is exclusive (i.e. 12:00:01 excludes the first second of the minute). (optional)
@@ -1664,14 +1664,14 @@ Returns Tweets that match a search query.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_tweets_search_all_response import Get2TweetsSearchAllResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_tweets_search_all_response import Get2TweetsSearchAllResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1681,14 +1681,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     query = '(from:TwitterDev OR from:TwitterAPI) has:media -is:retweet' # str | One query/rule/filter for matching Tweets. Refer to https://t.co/rulelength to identify the max query length.
     start_time = '2013-10-20T19:20:30+01:00' # datetime | YYYY-MM-DDTHH:mm:ssZ. The oldest UTC timestamp from which the Tweets will be provided. Timestamp is in second granularity and is inclusive (i.e. 12:00:01 includes the first second of the minute). (optional)
     end_time = '2013-10-20T19:20:30+01:00' # datetime | YYYY-MM-DDTHH:mm:ssZ. The newest, most recent UTC timestamp to which the Tweets will be provided. Timestamp is in second granularity and is exclusive (i.e. 12:00:01 excludes the first second of the minute). (optional)
@@ -1771,14 +1771,14 @@ Returns Tweets from the last 7 days that match a search query.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_tweets_search_recent_response import Get2TweetsSearchRecentResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_tweets_search_recent_response import Get2TweetsSearchRecentResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1790,14 +1790,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     query = '(from:TwitterDev OR from:TwitterAPI) has:media -is:retweet' # str | One query/rule/filter for matching Tweets. Refer to https://t.co/rulelength to identify the max query length.
     start_time = '2013-10-20T19:20:30+01:00' # datetime | YYYY-MM-DDTHH:mm:ssZ. The oldest UTC timestamp from which the Tweets will be provided. Timestamp is in second granularity and is inclusive (i.e. 12:00:01 includes the first second of the minute). (optional)
     end_time = '2013-10-20T19:20:30+01:00' # datetime | YYYY-MM-DDTHH:mm:ssZ. The newest, most recent UTC timestamp to which the Tweets will be provided. Timestamp is in second granularity and is exclusive (i.e. 12:00:01 excludes the first second of the minute). (optional)
@@ -1879,15 +1879,15 @@ Causes the User (in the path) to like the specified Tweet. The User in the path 
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.users_likes_create_request import UsersLikesCreateRequest
-from twitter_v2.models.users_likes_create_response import UsersLikesCreateResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.users_likes_create_request import UsersLikesCreateRequest
+from twitter_api_v2.models.users_likes_create_response import UsersLikesCreateResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1899,11 +1899,11 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User that is requesting to like the Tweet.
-    users_likes_create_request = twitter_v2.UsersLikesCreateRequest() # UsersLikesCreateRequest |  (optional)
+    users_likes_create_request = twitter_api_v2.UsersLikesCreateRequest() # UsersLikesCreateRequest |  (optional)
 
     try:
         # Causes the User (in the path) to like the specified Tweet
@@ -1958,14 +1958,14 @@ Returns a list of Tweets liked by the provided User ID
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_liked_tweets_response import Get2UsersIdLikedTweetsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_liked_tweets_response import Get2UsersIdLikedTweetsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1977,14 +1977,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = '2244994945' # str | The ID of the User to lookup.
     max_results = 56 # int | The maximum number of results. (optional)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get the next 'page' of results. (optional)
@@ -2055,14 +2055,14 @@ Returns Tweet objects that mention username associated to the provided User ID
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_mentions_response import Get2UsersIdMentionsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_mentions_response import Get2UsersIdMentionsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -2074,14 +2074,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = '2244994945' # str | The ID of the User to lookup.
     since_id = 'since_id_example' # str | The minimum Tweet ID to be included in the result set. This parameter takes precedence over start_time if both are specified. (optional)
     until_id = '1346889436626259968' # str | The maximum Tweet ID to be included in the result set. This parameter takes precedence over end_time if both are specified. (optional)
@@ -2159,15 +2159,15 @@ Causes the User (in the path) to retweet the specified Tweet. The User in the pa
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.users_retweets_create_request import UsersRetweetsCreateRequest
-from twitter_v2.models.users_retweets_create_response import UsersRetweetsCreateResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.users_retweets_create_request import UsersRetweetsCreateRequest
+from twitter_api_v2.models.users_retweets_create_response import UsersRetweetsCreateResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -2179,11 +2179,11 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User that is requesting to retweet the Tweet.
-    users_retweets_create_request = twitter_v2.UsersRetweetsCreateRequest() # UsersRetweetsCreateRequest |  (optional)
+    users_retweets_create_request = twitter_api_v2.UsersRetweetsCreateRequest() # UsersRetweetsCreateRequest |  (optional)
 
     try:
         # Causes the User (in the path) to retweet the specified Tweet.
@@ -2237,14 +2237,14 @@ Returns Tweet objects that appears in the provided User ID's home timeline
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_timelines_reverse_chronological_response import Get2UsersIdTimelinesReverseChronologicalResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_timelines_reverse_chronological_response import Get2UsersIdTimelinesReverseChronologicalResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -2256,9 +2256,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User to list Reverse Chronological Timeline Tweets of.
     since_id = '791775337160081409' # str | The minimum Tweet ID to be included in the result set. This parameter takes precedence over start_time if both are specified. (optional)
     until_id = '1346889436626259968' # str | The maximum Tweet ID to be included in the result set. This parameter takes precedence over end_time if both are specified. (optional)
@@ -2339,14 +2339,14 @@ Returns a list of Tweets authored by the provided User ID
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_tweets_response import Get2UsersIdTweetsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_tweets_response import Get2UsersIdTweetsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -2358,14 +2358,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = '2244994945' # str | The ID of the User to lookup.
     since_id = '791775337160081409' # str | The minimum Tweet ID to be included in the result set. This parameter takes precedence over start_time if both are specified. (optional)
     until_id = '1346889436626259968' # str | The maximum Tweet ID to be included in the result set. This parameter takes precedence over end_time if both are specified. (optional)
@@ -2445,14 +2445,14 @@ Causes the User (in the path) to unlike the specified Tweet. The User must match
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.users_likes_delete_response import UsersLikesDeleteResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.users_likes_delete_response import UsersLikesDeleteResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -2464,9 +2464,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User that is requesting to unlike the Tweet.
     tweet_id = 'tweet_id_example' # str | The ID of the Tweet that the User is requesting to unlike.
 
@@ -2522,14 +2522,14 @@ Causes the User (in the path) to unretweet the specified Tweet. The User must ma
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.users_retweets_delete_response import UsersRetweetsDeleteResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.users_retweets_delete_response import UsersRetweetsDeleteResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -2541,9 +2541,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.TweetsApi(api_client)
+    api_instance = twitter_api_v2.TweetsApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User that is requesting to retweet the Tweet.
     source_tweet_id = 'source_tweet_id_example' # str | The ID of the Tweet that the User is requesting to unretweet.
 

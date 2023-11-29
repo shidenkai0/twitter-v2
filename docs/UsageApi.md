@@ -1,4 +1,4 @@
-# twitter_v2.UsageApi
+# twitter_api_v2.UsageApi
 
 All URIs are relative to *https://api.twitter.com*
 
@@ -20,14 +20,14 @@ Returns the Tweet Usage.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_usage_tweets_response import Get2UsageTweetsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_usage_tweets_response import Get2UsageTweetsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -37,14 +37,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsageApi(api_client)
+    api_instance = twitter_api_v2.UsageApi(api_client)
     days = 7 # int | The number of days for which you need usage for. (optional) (default to 7)
     usage_fields = ['[\"cap_reset_day\",\"daily_client_app_usage\",\"daily_project_usage\",\"project_cap\",\"project_id\",\"project_usage\"]'] # List[str] | A comma separated list of Usage fields to display. (optional)
 

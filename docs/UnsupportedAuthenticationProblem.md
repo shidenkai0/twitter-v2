@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.unsupported_authentication_problem import UnsupportedAuthenticationProblem
+from twitter_api_v2.models.unsupported_authentication_problem import UnsupportedAuthenticationProblem
 
 # TODO update the JSON string below
 json = "{}"

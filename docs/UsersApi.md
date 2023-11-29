@@ -1,4 +1,4 @@
-# twitter_v2.UsersApi
+# twitter_api_v2.UsersApi
 
 All URIs are relative to *https://api.twitter.com*
 
@@ -36,14 +36,14 @@ This endpoint returns information about the requesting User.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_me_response import Get2UsersMeResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_me_response import Get2UsersMeResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -55,9 +55,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     user_fields = ['[\"created_at\",\"description\",\"entities\",\"id\",\"location\",\"most_recent_tweet_id\",\"name\",\"pinned_tweet_id\",\"profile_image_url\",\"protected\",\"public_metrics\",\"subscription_type\",\"url\",\"username\",\"verified\",\"verified_type\",\"withheld\"]'] # List[str] | A comma separated list of User fields to display. (optional)
     expansions = ['[\"most_recent_tweet_id\",\"pinned_tweet_id\"]'] # List[str] | A comma separated list of fields to expand. (optional)
     tweet_fields = ['[\"attachments\",\"author_id\",\"context_annotations\",\"conversation_id\",\"created_at\",\"edit_controls\",\"edit_history_tweet_ids\",\"entities\",\"geo\",\"id\",\"in_reply_to_user_id\",\"lang\",\"non_public_metrics\",\"note_tweet\",\"organic_metrics\",\"possibly_sensitive\",\"promoted_metrics\",\"public_metrics\",\"referenced_tweets\",\"reply_settings\",\"source\",\"text\",\"withheld\"]'] # List[str] | A comma separated list of Tweet fields to display. (optional)
@@ -116,14 +116,14 @@ This endpoint returns information about a User. Specify User by ID.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_response import Get2UsersIdResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_response import Get2UsersIdResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -135,14 +135,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     id = '2244994945' # str | The ID of the User to lookup.
     user_fields = ['[\"created_at\",\"description\",\"entities\",\"id\",\"location\",\"most_recent_tweet_id\",\"name\",\"pinned_tweet_id\",\"profile_image_url\",\"protected\",\"public_metrics\",\"subscription_type\",\"url\",\"username\",\"verified\",\"verified_type\",\"withheld\"]'] # List[str] | A comma separated list of User fields to display. (optional)
     expansions = ['[\"most_recent_tweet_id\",\"pinned_tweet_id\"]'] # List[str] | A comma separated list of fields to expand. (optional)
@@ -203,14 +203,14 @@ This endpoint returns information about a User. Specify User by username.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_by_username_username_response import Get2UsersByUsernameUsernameResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_by_username_username_response import Get2UsersByUsernameUsernameResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -222,14 +222,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     username = 'TwitterDev' # str | A username.
     user_fields = ['[\"created_at\",\"description\",\"entities\",\"id\",\"location\",\"most_recent_tweet_id\",\"name\",\"pinned_tweet_id\",\"profile_image_url\",\"protected\",\"public_metrics\",\"subscription_type\",\"url\",\"username\",\"verified\",\"verified_type\",\"withheld\"]'] # List[str] | A comma separated list of User fields to display. (optional)
     expansions = ['[\"most_recent_tweet_id\",\"pinned_tweet_id\"]'] # List[str] | A comma separated list of fields to expand. (optional)
@@ -290,14 +290,14 @@ This endpoint returns information about Users. Specify Users by their ID.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_response import Get2UsersResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_response import Get2UsersResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -309,14 +309,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     ids = ['2244994945,6253282,12'] # List[str] | A list of User IDs, comma-separated. You can specify up to 100 IDs.
     user_fields = ['[\"created_at\",\"description\",\"entities\",\"id\",\"location\",\"most_recent_tweet_id\",\"name\",\"pinned_tweet_id\",\"profile_image_url\",\"protected\",\"public_metrics\",\"subscription_type\",\"url\",\"username\",\"verified\",\"verified_type\",\"withheld\"]'] # List[str] | A comma separated list of User fields to display. (optional)
     expansions = ['[\"most_recent_tweet_id\",\"pinned_tweet_id\"]'] # List[str] | A comma separated list of fields to expand. (optional)
@@ -377,14 +377,14 @@ This endpoint returns information about Users. Specify Users by their username.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_by_response import Get2UsersByResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_by_response import Get2UsersByResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -396,14 +396,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     usernames = ['TwitterDev,TwitterAPI'] # List[str] | A list of usernames, comma-separated.
     user_fields = ['[\"created_at\",\"description\",\"entities\",\"id\",\"location\",\"most_recent_tweet_id\",\"name\",\"pinned_tweet_id\",\"profile_image_url\",\"protected\",\"public_metrics\",\"subscription_type\",\"url\",\"username\",\"verified\",\"verified_type\",\"withheld\"]'] # List[str] | A comma separated list of User fields to display. (optional)
     expansions = ['[\"most_recent_tweet_id\",\"pinned_tweet_id\"]'] # List[str] | A comma separated list of fields to expand. (optional)
@@ -464,14 +464,14 @@ Returns a list of Users that follow a List by the provided List ID
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_lists_id_followers_response import Get2ListsIdFollowersResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_lists_id_followers_response import Get2ListsIdFollowersResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -483,14 +483,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     id = 'id_example' # str | The ID of the List.
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
@@ -555,14 +555,14 @@ Returns a list of Users that are members of a List by the provided List ID.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_lists_id_members_response import Get2ListsIdMembersResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_lists_id_members_response import Get2ListsIdMembersResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -574,14 +574,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     id = 'id_example' # str | The ID of the List.
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
@@ -646,14 +646,14 @@ Returns a list of Users that have liked the provided Tweet ID
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_tweets_id_liking_users_response import Get2TweetsIdLikingUsersResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_tweets_id_liking_users_response import Get2TweetsIdLikingUsersResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -665,14 +665,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     id = 'id_example' # str | A single Tweet ID.
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get the next 'page' of results. (optional)
@@ -737,14 +737,14 @@ Returns a list of Users that have retweeted the provided Tweet ID
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_tweets_id_retweeted_by_response import Get2TweetsIdRetweetedByResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_tweets_id_retweeted_by_response import Get2TweetsIdRetweetedByResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -756,14 +756,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     id = 'id_example' # str | A single Tweet ID.
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get the next 'page' of results. (optional)
@@ -827,14 +827,14 @@ Returns a list of Users that are blocked by the provided User ID
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_blocking_response import Get2UsersIdBlockingResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_blocking_response import Get2UsersIdBlockingResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -846,9 +846,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User for whom to return results.
     max_results = 56 # int | The maximum number of results. (optional)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
@@ -912,15 +912,15 @@ Causes the User(in the path) to follow, or “request to follow” for protected
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.users_following_create_request import UsersFollowingCreateRequest
-from twitter_v2.models.users_following_create_response import UsersFollowingCreateResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.users_following_create_request import UsersFollowingCreateRequest
+from twitter_api_v2.models.users_following_create_response import UsersFollowingCreateResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -932,11 +932,11 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User that is requesting to follow the target User.
-    users_following_create_request = twitter_v2.UsersFollowingCreateRequest() # UsersFollowingCreateRequest |  (optional)
+    users_following_create_request = twitter_api_v2.UsersFollowingCreateRequest() # UsersFollowingCreateRequest |  (optional)
 
     try:
         # Follow User
@@ -991,14 +991,14 @@ Returns a list of Users who are followers of the specified User ID.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_followers_response import Get2UsersIdFollowersResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_followers_response import Get2UsersIdFollowersResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1010,14 +1010,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     id = '2244994945' # str | The ID of the User to lookup.
     max_results = 56 # int | The maximum number of results. (optional)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
@@ -1082,14 +1082,14 @@ Returns a list of Users that are being followed by the provided User ID
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_following_response import Get2UsersIdFollowingResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_following_response import Get2UsersIdFollowingResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1101,14 +1101,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     id = '2244994945' # str | The ID of the User to lookup.
     max_results = 56 # int | The maximum number of results. (optional)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
@@ -1172,15 +1172,15 @@ Causes the User (in the path) to mute the target User. The User (in the path) mu
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.mute_user_mutation_response import MuteUserMutationResponse
-from twitter_v2.models.mute_user_request import MuteUserRequest
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.mute_user_mutation_response import MuteUserMutationResponse
+from twitter_api_v2.models.mute_user_request import MuteUserRequest
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1192,11 +1192,11 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User that is requesting to mute the target User.
-    mute_user_request = twitter_v2.MuteUserRequest() # MuteUserRequest |  (optional)
+    mute_user_request = twitter_api_v2.MuteUserRequest() # MuteUserRequest |  (optional)
 
     try:
         # Mute User by User ID.
@@ -1250,14 +1250,14 @@ Returns a list of Users that are muted by the provided User ID
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_muting_response import Get2UsersIdMutingResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_muting_response import Get2UsersIdMutingResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1269,9 +1269,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User for whom to return results.
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get the next 'page' of results. (optional)
@@ -1335,14 +1335,14 @@ Causes the source User to unfollow the target User. The source User must match t
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.users_following_delete_response import UsersFollowingDeleteResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.users_following_delete_response import UsersFollowingDeleteResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1354,9 +1354,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     source_user_id = 'source_user_id_example' # str | The ID of the authenticated source User that is requesting to unfollow the target User.
     target_user_id = 'target_user_id_example' # str | The ID of the User that the source User is requesting to unfollow.
 
@@ -1412,14 +1412,14 @@ Causes the source User to unmute the target User. The source User must match the
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.mute_user_mutation_response import MuteUserMutationResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.mute_user_mutation_response import MuteUserMutationResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1431,9 +1431,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.UsersApi(api_client)
+    api_instance = twitter_api_v2.UsersApi(api_client)
     source_user_id = 'source_user_id_example' # str | The ID of the authenticated source User that is requesting to unmute the target User.
     target_user_id = 'target_user_id_example' # str | The ID of the User that the source User is requesting to unmute.
 

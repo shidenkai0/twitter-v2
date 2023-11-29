@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.tweet_note_tweet_entities import TweetNoteTweetEntities
+from twitter_api_v2.models.tweet_note_tweet_entities import TweetNoteTweetEntities
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.error import Error
+from twitter_api_v2.models.error import Error
 
 # TODO update the JSON string below
 json = "{}"

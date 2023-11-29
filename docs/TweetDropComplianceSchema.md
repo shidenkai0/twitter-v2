@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.tweet_drop_compliance_schema import TweetDropComplianceSchema
+from twitter_api_v2.models.tweet_drop_compliance_schema import TweetDropComplianceSchema
 
 # TODO update the JSON string below
 json = "{}"

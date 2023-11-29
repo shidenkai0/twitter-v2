@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.entity_indices_inclusive_inclusive import EntityIndicesInclusiveInclusive
+from twitter_api_v2.models.entity_indices_inclusive_inclusive import EntityIndicesInclusiveInclusive
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.mute_user_mutation_response import MuteUserMutationResponse
+from twitter_api_v2.models.mute_user_mutation_response import MuteUserMutationResponse
 
 # TODO update the JSON string below
 json = "{}"

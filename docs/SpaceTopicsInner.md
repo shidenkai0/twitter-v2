@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.space_topics_inner import SpaceTopicsInner
+from twitter_api_v2.models.space_topics_inner import SpaceTopicsInner
 
 # TODO update the JSON string below
 json = "{}"

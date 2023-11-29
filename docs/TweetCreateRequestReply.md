@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.tweet_create_request_reply import TweetCreateRequestReply
+from twitter_api_v2.models.tweet_create_request_reply import TweetCreateRequestReply
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# twitter_v2.ListsApi
+# twitter_api_v2.ListsApi
 
 All URIs are relative to *https://api.twitter.com*
 
@@ -34,14 +34,14 @@ Get a User's List Memberships.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_list_memberships_response import Get2UsersIdListMembershipsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_list_memberships_response import Get2UsersIdListMembershipsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -53,14 +53,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = '2244994945' # str | The ID of the User to lookup.
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
@@ -124,15 +124,15 @@ Causes a User to become a member of a List.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.list_add_user_request import ListAddUserRequest
-from twitter_v2.models.list_mutate_response import ListMutateResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.list_add_user_request import ListAddUserRequest
+from twitter_api_v2.models.list_mutate_response import ListMutateResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -144,11 +144,11 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = 'id_example' # str | The ID of the List for which to add a member.
-    list_add_user_request = twitter_v2.ListAddUserRequest() # ListAddUserRequest |  (optional)
+    list_add_user_request = twitter_api_v2.ListAddUserRequest() # ListAddUserRequest |  (optional)
 
     try:
         # Add a List member
@@ -202,15 +202,15 @@ Creates a new List.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.list_create_request import ListCreateRequest
-from twitter_v2.models.list_create_response import ListCreateResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.list_create_request import ListCreateRequest
+from twitter_api_v2.models.list_create_response import ListCreateResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -222,10 +222,10 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
-    list_create_request = twitter_v2.ListCreateRequest() # ListCreateRequest |  (optional)
+    api_instance = twitter_api_v2.ListsApi(api_client)
+    list_create_request = twitter_api_v2.ListCreateRequest() # ListCreateRequest |  (optional)
 
     try:
         # Create List
@@ -278,14 +278,14 @@ Delete a List that you own.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.list_delete_response import ListDeleteResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.list_delete_response import ListDeleteResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -297,9 +297,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = 'id_example' # str | The ID of the List to delete.
 
     try:
@@ -354,14 +354,14 @@ Returns a List.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_lists_id_response import Get2ListsIdResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_lists_id_response import Get2ListsIdResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -373,14 +373,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = 'id_example' # str | The ID of the List.
     list_fields = ['[\"created_at\",\"description\",\"follower_count\",\"id\",\"member_count\",\"name\",\"owner_id\",\"private\"]'] # List[str] | A comma separated list of List fields to display. (optional)
     expansions = ['[\"owner_id\"]'] # List[str] | A comma separated list of fields to expand. (optional)
@@ -440,15 +440,15 @@ Update a List that you own.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.list_update_request import ListUpdateRequest
-from twitter_v2.models.list_update_response import ListUpdateResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.list_update_request import ListUpdateRequest
+from twitter_api_v2.models.list_update_response import ListUpdateResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -460,11 +460,11 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = 'id_example' # str | The ID of the List to modify.
-    list_update_request = twitter_v2.ListUpdateRequest() # ListUpdateRequest |  (optional)
+    list_update_request = twitter_api_v2.ListUpdateRequest() # ListUpdateRequest |  (optional)
 
     try:
         # Update List.
@@ -518,14 +518,14 @@ Causes a User to be removed from the members of a List.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.list_mutate_response import ListMutateResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.list_mutate_response import ListMutateResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -537,9 +537,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = 'id_example' # str | The ID of the List to remove a member.
     user_id = 'user_id_example' # str | The ID of User that will be removed from the List.
 
@@ -595,15 +595,15 @@ Causes a User to follow a List.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.list_followed_request import ListFollowedRequest
-from twitter_v2.models.list_followed_response import ListFollowedResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.list_followed_request import ListFollowedRequest
+from twitter_api_v2.models.list_followed_response import ListFollowedResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -615,11 +615,11 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User that will follow the List.
-    list_followed_request = twitter_v2.ListFollowedRequest() # ListFollowedRequest |  (optional)
+    list_followed_request = twitter_api_v2.ListFollowedRequest() # ListFollowedRequest |  (optional)
 
     try:
         # Follow a List
@@ -674,14 +674,14 @@ Get a User's Owned Lists.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_owned_lists_response import Get2UsersIdOwnedListsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_owned_lists_response import Get2UsersIdOwnedListsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -693,14 +693,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = '2244994945' # str | The ID of the User to lookup.
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)
@@ -764,15 +764,15 @@ Causes a User to pin a List.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.list_pinned_request import ListPinnedRequest
-from twitter_v2.models.list_pinned_response import ListPinnedResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.list_pinned_request import ListPinnedRequest
+from twitter_api_v2.models.list_pinned_response import ListPinnedResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -784,11 +784,11 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User that will pin the List.
-    list_pinned_request = twitter_v2.ListPinnedRequest() # ListPinnedRequest | 
+    list_pinned_request = twitter_api_v2.ListPinnedRequest() # ListPinnedRequest | 
 
     try:
         # Pin a List
@@ -842,14 +842,14 @@ Get a User's Pinned Lists.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_pinned_lists_response import Get2UsersIdPinnedListsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_pinned_lists_response import Get2UsersIdPinnedListsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -861,9 +861,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User for whom to return results.
     list_fields = ['[\"created_at\",\"description\",\"follower_count\",\"id\",\"member_count\",\"name\",\"owner_id\",\"private\"]'] # List[str] | A comma separated list of List fields to display. (optional)
     expansions = ['[\"owner_id\"]'] # List[str] | A comma separated list of fields to expand. (optional)
@@ -923,14 +923,14 @@ Causes a User to unfollow a List.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.list_followed_response import ListFollowedResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.list_followed_response import ListFollowedResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -942,9 +942,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User that will unfollow the List.
     list_id = 'list_id_example' # str | The ID of the List to unfollow.
 
@@ -1000,14 +1000,14 @@ Causes a User to remove a pinned List.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.list_unpin_response import ListUnpinResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.list_unpin_response import ListUnpinResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1019,9 +1019,9 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User for whom to return results.
     list_id = 'list_id_example' # str | The ID of the List to unpin.
 
@@ -1078,14 +1078,14 @@ Returns a User's followed Lists.
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_users_id_followed_lists_response import Get2UsersIdFollowedListsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_users_id_followed_lists_response import Get2UsersIdFollowedListsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -1097,14 +1097,14 @@ configuration = twitter_v2.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ListsApi(api_client)
+    api_instance = twitter_api_v2.ListsApi(api_client)
     id = '2244994945' # str | The ID of the User to lookup.
     max_results = 100 # int | The maximum number of results. (optional) (default to 100)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get a specified 'page' of results. (optional)

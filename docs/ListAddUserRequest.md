@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.list_add_user_request import ListAddUserRequest
+from twitter_api_v2.models.list_add_user_request import ListAddUserRequest
 
 # TODO update the JSON string below
 json = "{}"

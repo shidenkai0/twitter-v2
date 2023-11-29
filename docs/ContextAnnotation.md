@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.context_annotation import ContextAnnotation
+from twitter_api_v2.models.context_annotation import ContextAnnotation
 
 # TODO update the JSON string below
 json = "{}"

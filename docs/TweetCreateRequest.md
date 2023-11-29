@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.tweet_create_request import TweetCreateRequest
+from twitter_api_v2.models.tweet_create_request import TweetCreateRequest
 
 # TODO update the JSON string below
 json = "{}"

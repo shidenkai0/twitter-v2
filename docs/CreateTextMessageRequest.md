@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.create_text_message_request import CreateTextMessageRequest
+from twitter_api_v2.models.create_text_message_request import CreateTextMessageRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.filtered_streaming_tweet_response_matching_rules_inner import FilteredStreamingTweetResponseMatchingRulesInner
+from twitter_api_v2.models.filtered_streaming_tweet_response_matching_rules_inner import FilteredStreamingTweetResponseMatchingRulesInner
 
 # TODO update the JSON string below
 json = "{}"

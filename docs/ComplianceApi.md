@@ -1,4 +1,4 @@
-# twitter_v2.ComplianceApi
+# twitter_api_v2.ComplianceApi
 
 All URIs are relative to *https://api.twitter.com*
 
@@ -25,15 +25,15 @@ Creates a compliance for the given job type
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.create_compliance_job_request import CreateComplianceJobRequest
-from twitter_v2.models.create_compliance_job_response import CreateComplianceJobResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.create_compliance_job_request import CreateComplianceJobRequest
+from twitter_api_v2.models.create_compliance_job_response import CreateComplianceJobResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -43,15 +43,15 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ComplianceApi(api_client)
-    create_compliance_job_request = twitter_v2.CreateComplianceJobRequest() # CreateComplianceJobRequest | 
+    api_instance = twitter_api_v2.ComplianceApi(api_client)
+    create_compliance_job_request = twitter_api_v2.CreateComplianceJobRequest() # CreateComplianceJobRequest | 
 
     try:
         # Create compliance job
@@ -104,14 +104,14 @@ Returns a single Compliance Job by ID
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_compliance_jobs_id_response import Get2ComplianceJobsIdResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_compliance_jobs_id_response import Get2ComplianceJobsIdResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -121,14 +121,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ComplianceApi(api_client)
+    api_instance = twitter_api_v2.ComplianceApi(api_client)
     id = 'id_example' # str | The ID of the Compliance Job to retrieve.
     compliance_job_fields = ['[\"created_at\",\"download_expires_at\",\"download_url\",\"id\",\"name\",\"resumable\",\"status\",\"type\",\"upload_expires_at\",\"upload_url\"]'] # List[str] | A comma separated list of ComplianceJob fields to display. (optional)
 
@@ -184,14 +184,14 @@ Streams 100% of compliance data for Tweets
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.tweet_compliance_stream_response import TweetComplianceStreamResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.tweet_compliance_stream_response import TweetComplianceStreamResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -201,14 +201,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ComplianceApi(api_client)
+    api_instance = twitter_api_v2.ComplianceApi(api_client)
     partition = 56 # int | The partition number.
     backfill_minutes = 56 # int | The number of minutes of backfill requested. (optional)
     start_time = '2021-02-01T18:40:40.000Z' # datetime | YYYY-MM-DDTHH:mm:ssZ. The earliest UTC timestamp from which the Tweet Compliance events will be provided. (optional)
@@ -268,14 +268,14 @@ Streams 100% of labeling events applied to Tweets
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.tweet_label_stream_response import TweetLabelStreamResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.tweet_label_stream_response import TweetLabelStreamResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -285,14 +285,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ComplianceApi(api_client)
+    api_instance = twitter_api_v2.ComplianceApi(api_client)
     backfill_minutes = 56 # int | The number of minutes of backfill requested. (optional)
     start_time = '2021-02-01T18:40:40.000Z' # datetime | YYYY-MM-DDTHH:mm:ssZ. The earliest UTC timestamp from which the Tweet labels will be provided. (optional)
     end_time = '2021-02-01T18:40:40.000Z' # datetime | YYYY-MM-DDTHH:mm:ssZ. The latest UTC timestamp from which the Tweet labels will be provided. (optional)
@@ -350,14 +350,14 @@ Streams 100% of compliance data for Users
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.user_compliance_stream_response import UserComplianceStreamResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.user_compliance_stream_response import UserComplianceStreamResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -367,14 +367,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ComplianceApi(api_client)
+    api_instance = twitter_api_v2.ComplianceApi(api_client)
     partition = 56 # int | The partition number.
     backfill_minutes = 56 # int | The number of minutes of backfill requested. (optional)
     start_time = '2021-02-01T18:40:40.000Z' # datetime | YYYY-MM-DDTHH:mm:ssZ. The earliest UTC timestamp from which the User Compliance events will be provided. (optional)
@@ -434,14 +434,14 @@ Returns recent Compliance Jobs for a given job type and optional job status
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_compliance_jobs_response import Get2ComplianceJobsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_compliance_jobs_response import Get2ComplianceJobsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -451,14 +451,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.ComplianceApi(api_client)
+    api_instance = twitter_api_v2.ComplianceApi(api_client)
     type = 'type_example' # str | Type of Compliance Job to list.
     status = 'status_example' # str | Status of Compliance Job to list. (optional)
     compliance_job_fields = ['[\"created_at\",\"download_expires_at\",\"download_url\",\"id\",\"name\",\"resumable\",\"status\",\"type\",\"upload_expires_at\",\"upload_url\"]'] # List[str] | A comma separated list of ComplianceJob fields to display. (optional)

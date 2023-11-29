@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.resource_unauthorized_problem import ResourceUnauthorizedProblem
+from twitter_api_v2.models.resource_unauthorized_problem import ResourceUnauthorizedProblem
 
 # TODO update the JSON string below
 json = "{}"

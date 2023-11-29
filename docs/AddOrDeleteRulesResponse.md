@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.add_or_delete_rules_response import AddOrDeleteRulesResponse
+from twitter_api_v2.models.add_or_delete_rules_response import AddOrDeleteRulesResponse
 
 # TODO update the JSON string below
 json = "{}"

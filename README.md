@@ -24,7 +24,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import twitter_v2
+import twitter_api_v2
 ```
 
 ### Setuptools
@@ -38,7 +38,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import twitter_v2
+import twitter_api_v2
 ```
 
 ### Tests
@@ -52,13 +52,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-import twitter_v2
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -71,9 +71,9 @@ configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.BookmarksApi(api_client)
+    api_instance = twitter_api_v2.BookmarksApi(api_client)
     id = 'id_example' # str | The ID of the authenticated source User for whom to return results.
     max_results = 56 # int | The maximum number of results. (optional)
     pagination_token = 'pagination_token_example' # str | This parameter is used to get the next 'page' of results. (optional)

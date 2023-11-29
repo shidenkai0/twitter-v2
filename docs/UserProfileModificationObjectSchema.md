@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.user_profile_modification_object_schema import UserProfileModificationObjectSchema
+from twitter_api_v2.models.user_profile_modification_object_schema import UserProfileModificationObjectSchema
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.dm_event_attachments import DmEventAttachments
+from twitter_api_v2.models.dm_event_attachments import DmEventAttachments
 
 # TODO update the JSON string below
 json = "{}"

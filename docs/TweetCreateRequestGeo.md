@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.tweet_create_request_geo import TweetCreateRequestGeo
+from twitter_api_v2.models.tweet_create_request_geo import TweetCreateRequestGeo
 
 # TODO update the JSON string below
 json = "{}"

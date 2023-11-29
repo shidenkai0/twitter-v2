@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.connection_exception_problem import ConnectionExceptionProblem
+from twitter_api_v2.models.connection_exception_problem import ConnectionExceptionProblem
 
 # TODO update the JSON string below
 json = "{}"

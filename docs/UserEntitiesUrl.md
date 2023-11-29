@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.user_entities_url import UserEntitiesUrl
+from twitter_api_v2.models.user_entities_url import UserEntitiesUrl
 
 # TODO update the JSON string below
 json = "{}"

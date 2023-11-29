@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.get2_dm_conversations_id_dm_events_response_meta import Get2DmConversationsIdDmEventsResponseMeta
+from twitter_api_v2.models.get2_dm_conversations_id_dm_events_response_meta import Get2DmConversationsIdDmEventsResponseMeta
 
 # TODO update the JSON string below
 json = "{}"

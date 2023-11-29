@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.rules_lookup_response import RulesLookupResponse
+from twitter_api_v2.models.rules_lookup_response import RulesLookupResponse
 
 # TODO update the JSON string below
 json = "{}"

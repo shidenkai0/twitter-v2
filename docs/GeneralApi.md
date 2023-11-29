@@ -1,4 +1,4 @@
-# twitter_v2.GeneralApi
+# twitter_api_v2.GeneralApi
 
 All URIs are relative to *https://api.twitter.com*
 
@@ -20,21 +20,21 @@ Full OpenAPI Specification in JSON format. (See https://github.com/OAI/OpenAPI-S
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.GeneralApi(api_client)
+    api_instance = twitter_api_v2.GeneralApi(api_client)
 
     try:
         # Returns the OpenAPI Specification document.
@@ -83,14 +83,14 @@ Returns the counts of rules from a User's active rule set, to reflect usage by p
 ```python
 import time
 import os
-import twitter_v2
-from twitter_v2.models.get2_tweets_search_stream_rules_counts_response import Get2TweetsSearchStreamRulesCountsResponse
-from twitter_v2.rest import ApiException
+import twitter_api_v2
+from twitter_api_v2.models.get2_tweets_search_stream_rules_counts_response import Get2TweetsSearchStreamRulesCountsResponse
+from twitter_api_v2.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.twitter.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     host = "https://api.twitter.com"
 )
 
@@ -100,14 +100,14 @@ configuration = twitter_v2.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: BearerToken
-configuration = twitter_v2.Configuration(
+configuration = twitter_api_v2.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with twitter_v2.ApiClient(configuration) as api_client:
+with twitter_api_v2.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = twitter_v2.GeneralApi(api_client)
+    api_instance = twitter_api_v2.GeneralApi(api_client)
     rules_count_fields = ['[\"all_project_client_apps\",\"cap_per_client_app\",\"cap_per_project\",\"client_app_rules_count\",\"project_rules_count\"]'] # List[str] | A comma separated list of RulesCount fields to display. (optional)
 
     try:

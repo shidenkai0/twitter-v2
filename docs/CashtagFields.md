@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.cashtag_fields import CashtagFields
+from twitter_api_v2.models.cashtag_fields import CashtagFields
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.context_annotation_entity_fields import ContextAnnotationEntityFields
+from twitter_api_v2.models.context_annotation_entity_fields import ContextAnnotationEntityFields
 
 # TODO update the JSON string below
 json = "{}"

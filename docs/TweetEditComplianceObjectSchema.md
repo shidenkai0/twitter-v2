@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from twitter_v2.models.tweet_edit_compliance_object_schema import TweetEditComplianceObjectSchema
+from twitter_api_v2.models.tweet_edit_compliance_object_schema import TweetEditComplianceObjectSchema
 
 # TODO update the JSON string below
 json = "{}"
